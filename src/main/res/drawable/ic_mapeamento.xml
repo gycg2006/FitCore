@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Parte vermelha do marcador -->
+    <path
+        android:fillColor="#F76D57"
+        android:pathData="M32,52.789L20,34.789C18.5,32,16,28.031,16,24c0,-8.836 7.164,-16 16,-16s16,7.164 16,16c0,4.031 -2.055,8 -4,10.789L32,52.789Z" />
+
+    <!-- Contorno escuro e círculo interno -->
+    <path
+        android:fillColor="#394240"
+        android:pathData="M32,0C18.746,0 8,10.746 8,24c0,5.219 1.711,10.008 4.555,13.93l16,24C29.414,63.332 30.664,64 32,64s2.586,-0.668 3.328,-1.781l16,-24C54.289,34.008 56,29.219 56,24 56,10.746 45.254,0 32,0Z M44,34.789l-12,18 -12,-18C18.5,32 16,28.031 16,24c0,-8.836 7.164,-16 16,-16s16,7.164 16,16c0,4.031 -2.055,8 -4,10.789Z" />
+
+    <!-- Círculo central do marcador -->
+    <path
+        android:fillColor="#394240"
+        android:pathData="M32,16a8,8 0 1,0 0,16a8,8 0 1,0 0,-16Z" />
+</vector>

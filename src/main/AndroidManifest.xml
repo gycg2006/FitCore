@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitCore"
+        tools:targetApi="31">
+        <activity
+            android:name=".Nutricionista_chat"
+            android:exported="false" />
+        <activity
+            android:name=".AulasColetivas"
+            android:exported="false" />
+        <activity
+            android:name=".InscricaoAulasColetivasZumba"
+            android:exported="false" />
+        <activity
+            android:name=".inscricaoAulasColetivasFitburn"
+            android:exported="false" />
+        <activity
+            android:name=".inscricaoAulasColetivasCore"
+            android:exported="false" />
+        <activity
+            android:name=".inscricaoAulasColetivasResistencia"
+            android:exported="false" />
+        <activity
+            android:name=".ModificandoTreinoAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".GerenciarAlunosAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".CadastroExercicioAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".CadastromaquinaAdiministrador"
+            android:exported="false" />
+        <activity
+            android:name=".CentralAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".TermosPoliticaPrivacidade"
+            android:exported="false" />
+        <activity
+            android:name=".InformacoesUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".MaquinasDefeituosas"
+            android:exported="false" />
+        <activity
+            android:name=".FichaDeTreino"
+            android:exported="false" />
+        <activity
+            android:name=".ContratoNutricionista"
+            android:exported="false" />
+        <activity
+            android:name=".AssistenteVirtual"
+            android:exported="false" />
+        <activity
+            android:name=".CentralDeInformacoes"
+            android:exported="false" />
+        <activity
+            android:name=".RedefinicaoDeSenha"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cadastro"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

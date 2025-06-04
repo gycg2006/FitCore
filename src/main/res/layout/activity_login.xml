@@ -1,0 +1,108 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagem de fundo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_image"
+        android:scaleType="centerCrop" />
+
+    <!-- Camada escura para melhorar contraste -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" />
+
+    <!-- Conteúdo centralizado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:text="FitCore"
+            android:textColor="#FFA500"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bem-vindo de volta!"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:textColorHint="#999999"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@drawable/ic_email" />
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Senha"
+            android:textColorHint="#999999"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock" />
+
+        <TextView
+            android:id="@+id/tvEsqueceuSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu a senha?"
+            android:textColor="#FFA500"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="end" />
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#ED9438"
+            android:text="Continuar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:text="Novo por aqui? Cadastre-se"
+            android:textColor="#FFA500" />
+
+        <!-- Link dos termos de uso -->
+        <TextView
+            android:id="@+id/termos_uso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:text="Termos de uso"
+            android:textColor="#FFA500"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

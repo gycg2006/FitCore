@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="home">#ED9438</color>
+    <color name="peso">#1194AA</color>
+    <color name="perfil">#C9379D</color>
+    <color name="config">#5B37B7</color>
+
+    <color name="home_20">#B67038</color>
+    <color name="peso_20">#33C9379D</color>
+    <color name="perfil_20">#33AE7E0F</color>
+    <color name="config_20">#335B37B7</color>
+    <color name="orange">#ED9438</color>
+
+
+</resources>

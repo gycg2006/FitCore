@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "132411807607",
+    "project_id": "beatbox-995dc",
+    "storage_bucket": "beatbox-995dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132411807607:android:3e16e54156237af5a5b372",
+        "android_client_info": {
+          "package_name": "com.example.fitcore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKVSrGIuYFf2jJKZHK-wj-2Sb2iIu0gpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132411807607:android:9d72d8436a6f3ebea5b372",
+        "android_client_info": {
+          "package_name": "com.example.testefirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKVSrGIuYFf2jJKZHK-wj-2Sb2iIu0gpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
