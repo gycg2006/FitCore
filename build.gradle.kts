@@ -37,6 +37,8 @@ android {
 }
 
 dependencies {
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
     implementation("com.google.firebase:firebase-firestore-ktx")

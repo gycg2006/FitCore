@@ -44,8 +44,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 .get()
                 .addOnSuccessListener { documents ->
                     if (documents.isEmpty) {
-                        Toast.makeText(baseContext, "E-mail ou senha inválidos.", Toast.LENGTH_LONG)
-                            .show()
+                        Toast.makeText(requireContext(), "E-mail ou senha inválidos.", Toast.LENGTH_LONG).show()
                         Log.d(
                             "LoginFirestore",
                             "Nenhum documento encontrado para o email: ${Login.LoginCredentials.emailLogado}"
@@ -53,7 +52,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     } else {
                         val userDocument = documents.documents[0]
                         val contratoBool = userDocument.getString("contrato")
-                        if (contratoBool.equalsTo("true")) {
+                        if (contratoBool == ("true")) {
                             val intent = Intent(requireContext(), Nutricionista_chat::class.java)
                             startActivity(intent)
                         } else {

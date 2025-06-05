@@ -32,7 +32,7 @@ class CentralAdministrador : AppCompatActivity() {
             val intent = Intent(this, CadastromaquinaAdiministrador::class.java)
             startActivity(intent)
         }
-        val botaoDeslogar = findViewById<Button>(R.id.button5)
+        val botaoDeslogar = findViewById<Button>(R.id.buttonVoltarLogin)
         botaoDeslogar.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)

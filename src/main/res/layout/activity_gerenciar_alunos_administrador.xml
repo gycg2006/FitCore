@@ -13,56 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="fitXY"
-        android:scaleY="1"
         android:src="@drawable/top_curve"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewJulia"
-        android:layout_width="84dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageViewPedro"
-        android:layout_width="84dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageViewAirton"
-        android:layout_width="84dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageViewCarla"
-        android:layout_width="84dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.799"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textViewListaAlunos"
@@ -72,141 +26,31 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.3" />
 
-    <TextView
-        android:id="@+id/textViewJulia"
-        android:layout_width="79dp"
-        android:layout_height="39dp"
-        android:gravity="center"
-        android:text="JÚLIA GARCIA"
-        android:textColor="#E9E3E3"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.379"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAlunos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView14"
+        app:layout_constraintBottom_toTopOf="@id/buttonVoltarListaAlunos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
-
-    <TextView
-        android:id="@+id/textViewPedro"
-        android:layout_width="89dp"
-        android:layout_height="40dp"
-        android:allowUndo="true"
-        android:gravity="center"
-        android:text="PEDRO ARAGÃO"
-        android:textColor="#E9E3E3"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
-
-    <TextView
-        android:id="@+id/textViewAirton"
-        android:layout_width="79dp"
-        android:layout_height="54dp"
-        android:allowUndo="true"
-        android:gravity="center"
-        android:text="AIRTON SANTOS"
-        android:textColor="#E9E3E3"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
-
-    <TextView
-        android:id="@+id/textViewCarla"
-        android:layout_width="87dp"
-        android:layout_height="41dp"
-        android:allowUndo="true"
-        android:gravity="center"
-        android:text="CARLA VIEIRA"
-        android:textColor="#E9E3E3"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
-
-    <Button
-        android:id="@+id/buttonEditarFichaJulia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ED9438"
-        android:text="EDITAR FICHA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245" />
-
-    <Button
-        android:id="@+id/buttonEditarFichaPedro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ED9438"
-        android:text="EDITAR FICHA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
-
-    <Button
-        android:id="@+id/buttonEditarFichaAirton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ED9438"
-        android:text="EDITAR FICHA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
-
-    <Button
-        android:id="@+id/buttonEditarFichaCarla"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ED9438"
-        android:text="EDITAR FICHA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        tools:listitem="@layout/item_aluno" />
 
     <Button
         android:id="@+id/buttonVoltarListaAlunos"
-        android:layout_width="104dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:backgroundTint="#555555"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

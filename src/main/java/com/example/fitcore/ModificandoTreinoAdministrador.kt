@@ -10,12 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 class ModificandoTreinoAdministrador : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_modificando_treino_administrador)
+        setContentView(R.layout.activity_modificando_ficha_do_aluno)
 
 
-        val botaoConcluirUm = findViewById<Button>(R.id.button20)
-        botaoConcluirUm.setOnClickListener {
-            finish()
-        }
     }
 }
