@@ -5,166 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F1E1E"
-    android:outlineAmbientShadowColor="#0D0D0D"
     tools:context=".ListaTreinosFragment">
 
+    <TextView
+        android:id="@+id/textViewTituloListaTreinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione seu Treino"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewModelosTreino"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloListaTreinos"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Seção para Superior 1 -->
-            <FrameLayout
-                android:id="@+id/imagemMoldura"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="72dp"
-                android:background="@drawable/circle_border">
-
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/circle_border"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/benchpress800" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="10dp"
-                android:text="Superiores I"
-                android:textColor="#DEE0E6"
-                android:textSize="21sp" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="5dp"
-                android:text="Esse treino é bom para peito, triceps e ombro."
-                android:textColor="#DEE0E6" />
-
-            <Button
-                android:id="@+id/iniciarButtonSup1"
-                android:layout_width="100dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#433ABC"
-                android:text="Iniciar" />
-
-            <!-- Seção para Inferior 1 -->
-            <FrameLayout
-                android:id="@+id/imagemMoldura2"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/circle_border">
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/circle_border"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/perna" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="20dp"
-                android:text="Inferiores I"
-                android:textColor="#DEE0E6"
-                android:textSize="21sp" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="5dp"
-                android:text="Esse treino é bom para posteriores."
-                android:textColor="#DEE0E6" />
-
-            <Button
-                android:id="@+id/iniciarButtonInf1"
-                android:layout_width="100dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#433ABC"
-                android:text="Iniciar" />
-
-            <!-- Seção para Inferior 2 -->
-            <FrameLayout
-                android:id="@+id/imagemMoldura3"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/circle_border">
-
-                <ImageView
-                    android:id="@+id/imageView23"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/circle_border"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/perna" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="20dp"
-                android:text="Inferiores II"
-                android:textColor="#DEE0E6"
-                android:textSize="21sp" />
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="5dp"
-                android:text="Esse treino é bom para quadriceps."
-                android:textColor="#DEE0E6" />
-
-            <Button
-                android:id="@+id/iniciarButtonInf2"
-                android:layout_width="100dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="#433ABC"
-                android:text="Iniciar" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- CardView (exemplo de card com fundo laranja) -->
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

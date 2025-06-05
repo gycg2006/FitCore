@@ -6,3 +6,4 @@ data class Exercicio (
     val urlFoto: String = "",
     val descricao: String = ""
 )
+

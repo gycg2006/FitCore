@@ -12,13 +12,16 @@ class AulasColetivas : AppCompatActivity() {
     lateinit var buttonResistencia: Button
     lateinit var buttonFitburn: Button
 
+
+
     object AppConstants {
-        const val PREFS_NAME = "AulasColetivasPrefs"
-        const val KEY_VAGAS_CORE = "vagas_core"
-        const val KEY_VAGAS_FITBURN = "vagas_fitburn"
-        const val KEY_VAGAS_RESISTENCIA = "vagas_resistencia"
-        const val KEY_VAGAS_ZUMBA = "vagas_zumba"
-        const val TOTAL_VAGAS = 20
+        const val PREFS_NAME = "FitCoreAulasPrefs" // Nome do arquivo SharedPreferences
+        const val TOTAL_VAGAS = 20 // Total de vagas por aula
+
+        const val KEY_INSCRITOS_CORE = "inscritos_aula_core"
+        const val KEY_INSCRITOS_FITBURN = "inscritos_aula_fitburn"
+        const val KEY_INSCRITOS_RESISTENCIA = "inscritos_aula_resistencia"
+        const val KEY_INSCRITOS_ZUMBA = "inscritos_aula_zumba"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -157,6 +157,17 @@ class ModificandoTreinoAdministrador : AppCompatActivity() {
                     ordem = ordemAtual
                 )
 
+                val novaMaquina = hashMapOf(
+                    "nome" to nome,
+                    "urlFoto" to midiaUrl,
+                    "series" to series,
+                    "repeticoes" to repeticoes,
+                    "observacoes" to observacoes.ifEmpty { null }
+                )
+
+                db.collection("Maquina")
+                    .add(novaMaquina)
+
                 salvarExercicioNaFicha(exercicioParaSalvar, exercicioExistente == null)
                 dialog.dismiss()
             }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#2C2B2B"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewExercicioMidia"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/perna" /> <TextView
+        android:id="@+id/textViewExercicioNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxExercicioCompleto"
+        app:layout_constraintStart_toEndOf="@+id/imageViewExercicioMidia"
+        app:layout_constraintTop_toTopOf="@+id/imageViewExercicioMidia"
+        tools:text="Nome do Exercício" />
+
+        <TextView
+            android:id="@+id/textViewExercicioSeriesReps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#D1D1D1"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewExercicioNome"
+            app:layout_constraintStart_toStartOf="@+id/textViewExercicioNome"
+            app:layout_constraintTop_toBottomOf="@+id/textViewExercicioNome"
+            tools:text="Séries: 3, Repetições: 10-12" />
+
+        <TextView
+            android:id="@+id/textViewExercicioDescricaoMaster"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#A0A0A0"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/textViewExercicioSeriesReps"
+            app:layout_constraintStart_toStartOf="@+id/textViewExercicioSeriesReps"
+            app:layout_constraintTop_toBottomOf="@+id/textViewExercicioSeriesReps"
+            tools:text="Descrição detalhada de como realizar o exercício e quais músculos são trabalhados."
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/textViewExercicioObservacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#B0B0B0"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/textViewExercicioDescricaoMaster"
+            app:layout_constraintStart_toStartOf="@+id/textViewExercicioDescricaoMaster"
+            app:layout_constraintTop_toBottomOf="@+id/textViewExercicioDescricaoMaster"
+            tools:text="Obs: Manter a postura correta."
+            tools:visibility="visible"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxExercicioCompleto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewExercicioNome"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewExercicioNome" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

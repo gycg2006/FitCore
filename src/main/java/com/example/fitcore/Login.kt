@@ -18,6 +18,8 @@ class Login : AppCompatActivity() {
 
     object LoginCredentials {
         var emailLogado = ""
+        var nome = ""
+        var cpf = ""
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,6 +89,8 @@ class Login : AppCompatActivity() {
                                 finish()
                             } else {
                                 LoginCredentials.emailLogado = userDocument.getString("email")!!
+                                LoginCredentials.nome = userDocument.getString("nome")!!
+                                LoginCredentials.cpf = userDocument.getString("cpf")!!
                                 val intent = Intent(this, CentralDeInformacoes::class.java)
                                 startActivity(intent)
                                 finish()

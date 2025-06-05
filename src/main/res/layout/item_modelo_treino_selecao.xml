@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="#2C2B2B"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewModeloIcon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/circle_border"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/benchpress800" /> <TextView
+        android:id="@+id/textViewModeloNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="#DEE0E6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewModeloIcon"
+        app:layout_constraintTop_toTopOf="@+id/imageViewModeloIcon"
+        tools:text="Nome do Modelo de Treino" />
+
+        <TextView
+            android:id="@+id/textViewModeloDescricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewModeloNome"
+            app:layout_constraintStart_toStartOf="@+id/textViewModeloNome"
+            app:layout_constraintTop_toBottomOf="@+id/textViewModeloNome"
+            tools:text="Descrição breve do modelo de treino, focando nos principais grupos musculares ou objetivos." />
+
+        <Button
+            android:id="@+id/buttonIniciarModelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#433ABC"
+            android:text="Iniciar"
+            app:layout_constraintStart_toStartOf="@+id/textViewModeloDescricao"
+            app:layout_constraintTop_toBottomOf="@+id/textViewModeloDescricao"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp"/> </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

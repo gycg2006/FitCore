@@ -2,250 +2,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-
-    >
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="409dp"
-        android:layout_height="680dp"
-        android:background="#1F1E1E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:id="@+id/treinoFrame2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="40dp">
-
-                <ImageView
-                    android:id="@+id/treinoExtensora"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    app:srcCompat="@drawable/perna" />
-
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Cadeira Flexora"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="04x10"
-                android:textColor="#A29E9E" />
-
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="245dp"
-                android:layout_marginTop="-55dp"
-                android:checked="false"
-                android:textColorLink="#4A42F6" />
-
-            <FrameLayout
-                android:id="@+id/treinoFrame1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/treinoExtensora2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    app:srcCompat="@drawable/perna" />
-
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Cadeira Extensora"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-
-                android:text="03x12"
-                android:textColor="#A29E9E" />
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="245dp"
-                android:layout_marginTop="-53dp"
-                android:checked="false"
-                android:textColorLink="#4A42F6" />
-
-            <FrameLayout
-                android:id="@+id/treinoFrame3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/treinoExtensora3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    app:srcCompat="@drawable/perna" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView123"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Leg Press 45ยบ"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView1234"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-
-                android:text="03x12"
-                android:textColor="#A29E9E" />
-
-            <CheckBox
-                android:id="@+id/checkBox123"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="245dp"
-                android:layout_marginTop="-53dp"
-                android:checked="false"
-                android:textColorLink="#4A42F6" />
-
-            <FrameLayout
-                android:id="@+id/treinoFrame4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/treinoExtensora4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    app:srcCompat="@drawable/perna" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/textView12345"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Agachamento com Barra"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView123456"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="04x10"
-                android:textColor="#A29E9E" />
-
-            <CheckBox
-                android:id="@+id/checkBox12345"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="275dp"
-                android:layout_marginTop="-53dp"
-                android:checked="false"
-                android:textColorLink="#4A42F6" />
-
-            <com.google.android.material.bottomappbar.BottomAppBar
-                android:id="@+id/bottomAppBarFim"
-                android:layout_width="410dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="45dp"
-                app:backgroundTint="#00ED9438"
-                tools:ignore="BottomAppBar" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="413dp"
-        android:layout_height="145dp"
-        android:layout_gravity="bottom"
-        app:backgroundTint="#ED9438"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="BottomAppBar" />
+    android:layout_height="match_parent"> <com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bottomAppBar"
+    android:layout_width="0dp" android:layout_height="145dp"
+    app:backgroundTint="#ED9438"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="BottomAppBar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="406dp"
-        android:layout_height="143dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/headerContentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintEnd_toEndOf="@+id/bottomAppBar"
+        app:layout_constraintStart_toStartOf="@+id/bottomAppBar"
+        app:layout_constraintTop_toTopOf="@+id/bottomAppBar">
 
         <TextView
-            android:id="@+id/textView7"
-            android:layout_width="157dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="32dp"
+            android:id="@+id/textViewNomeDoTreinoFicha" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Inferiores I"
             android:textColor="#211F1F"
-            android:textSize="32sp"
+            android:textSize="28sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nome do Treino" />
 
         <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="344dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="88dp"
+            android:id="@+id/progressBarFicha" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:max="100"
+            android:progress="0"
             android:progressTint="#203BD3"
-            android:scaleX="1"
-            android:scaleY="3"
+            android:scaleY="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomeDoTreinoFicha" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewExercicios"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1F1E1E"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarFicha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExerciciosFicha" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            tools:listitem="@layout/item_exercicio_ficha_usuario"/>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/buttonVoltarFicha"
-        android:layout_width="100dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#433ABC"
         android:text="Voltar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar" />
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
