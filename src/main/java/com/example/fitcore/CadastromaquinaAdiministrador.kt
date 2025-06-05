@@ -53,7 +53,7 @@ class CadastromaquinaAdiministrador : AppCompatActivity() {
         val midiaUrl = editTextMidiaMaquina.text.toString().trim() // Espera-se uma URL aqui
         val localizador = editTextLocalizadorMaquina.text.toString().trim()
 
-        if (nome.isEmpty() || midiaUrl.isEmpty() || localizador.isEmpty()) {
+        if (nome.isEmpty() || localizador.isEmpty()) {
             Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show()
             return
         }
@@ -64,6 +64,7 @@ class CadastromaquinaAdiministrador : AppCompatActivity() {
         val novaMaquina = Maquina(
             nome = nome,
             urlFoto = midiaUrl,
+            descricao = localizador
         )
 
         db.collection("Maquina")
@@ -80,9 +81,4 @@ class CadastromaquinaAdiministrador : AppCompatActivity() {
                 buttonRegistrarMaquina.isEnabled = true // Reabilitar botão
             }
     }
-
-    // private fun abrirSeletorDeMidia() {
-    //     // Implementar lógica para abrir galeria/câmera e tratar resultado
-    //     Toast.makeText(this, "Funcionalidade de upload de mídia a ser implementada.", Toast.LENGTH_SHORT).show()
-    // }
 }

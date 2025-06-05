@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.ktx.toObject
 
 class CadastroExercicioAdministrador : AppCompatActivity() {
 
@@ -54,7 +55,7 @@ class CadastroExercicioAdministrador : AppCompatActivity() {
         val midiaUrl = editTextMidiaExercicio.text.toString().trim() // Espera-se uma URL aqui
         val descricao = editTextDescricaoExercicio.text.toString().trim()
 
-        if (nome.isEmpty() || midiaUrl.isEmpty() || descricao.isEmpty()) {
+        if (nome.isEmpty() || descricao.isEmpty()) {
             Toast.makeText(this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show()
             return
         }
@@ -69,23 +70,19 @@ class CadastroExercicioAdministrador : AppCompatActivity() {
             descricao = descricao
         )
 
-        db.collection("Treino") // Usando "Exercicios" como nome da coleção
+        db.collection("Exercicios") // Usando "Exercicios" como nome da coleção
             .add(novoExercicio)
             .addOnSuccessListener { documentReference ->
-                Toast.makeText(this, "Exercício registrado", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Exercício registrado com ID: ${documentReference.id}", Toast.LENGTH_LONG).show()
+                // Limpar campos ou navegar para outra tela
                 val intent = Intent(this, CentralAdministrador::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                 startActivity(intent)
-                finish()
+                finish() // Finaliza esta activity
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Erro ao registrar exercício: ${e.message}", Toast.LENGTH_LONG).show()
                 buttonRegistrarExercicio.isEnabled = true // Reabilitar botão em caso de falha
             }
     }
-
-    // private fun abrirSeletorDeMidia() {
-    //     // Implementar lógica para abrir galeria/câmera e tratar resultado
-    //     Toast.makeText(this, "Funcionalidade de upload de mídia a ser implementada.", Toast.LENGTH_SHORT).show()
-    // }
 }
