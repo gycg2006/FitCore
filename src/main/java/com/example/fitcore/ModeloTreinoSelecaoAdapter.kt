@@ -18,7 +18,7 @@ class ModeloTreinoSelecaoAdapter(
         val nome: TextView = itemView.findViewById(R.id.textViewModeloNome)
         val descricao: TextView = itemView.findViewById(R.id.textViewModeloDescricao)
         val imagem: ImageView = itemView.findViewById(R.id.imageViewModeloIcon) // Assumindo que ModeloTreino terá um campo para imagem
-        val btnIniciar: Button = itemView.findViewById(R.id.buttonIniciarModelo)
+        val informacoes: TextView = itemView.findViewById(R.id.textView6)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,26 +30,12 @@ class ModeloTreinoSelecaoAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val modelo = modelos[position]
         holder.nome.text = modelo.nome
-//        holder.descricao.text = modelo.descricao ?: "Sem descrição."
+        holder.descricao.text = modelo.descricao ?: "3/4 Séries"
+//        holder.informacoes.text = modelo.series ?: "Sem informações."
 
-        // Supondo que ModeloTreino tenha um campo `imagemUrl`
-        // Se não tiver, você pode definir uma imagem padrão baseada no nome ou tipo
-        /*
-        if (modelo.imagemUrl.isNotEmpty()) { // Adicione imagemUrl à sua data class ModeloTreino
-            Glide.with(holder.itemView.context)
-                .load(modelo.imagemUrl)
-                .placeholder(R.drawable.ic_placeholder_fitness)
-                .error(R.drawable.ic_placeholder_fitness)
-                .into(holder.imagem)
-        } else {
-            holder.imagem.setImageResource(R.drawable.ic_placeholder_fitness)
-        }
-        */
-        // Por enquanto, vamos usar uma imagem de placeholder
         holder.imagem.setImageResource(R.drawable.benchpress800) // Ou outra que você tenha
 
 
-        holder.btnIniciar.setOnClickListener { onIniciarClick(modelo) }
     }
 
     override fun getItemCount(): Int = modelos.size

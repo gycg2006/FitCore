@@ -9,11 +9,11 @@ import android.widget.FrameLayout // Import FrameLayout
 import androidx.fragment.app.Fragment
 
 // Enum TipoDaltonismo (mantenha ou defina em um local acessível)
-enum class TipoDaltonismo {
-    NORMAL,
-    PROTANOPIA,
-    DEUTERANOPIA,
-    TRITANOPIA
+public enum class TipoDaltonismo(val overlayColor: Int) {
+    NORMAL(Color.TRANSPARENT),
+    PROTANOPIA(Color.argb(70, 0, 100, 100)),
+    DEUTERANOPIA(Color.argb(70, 100, 0, 100)),
+    TRITANOPIA(Color.argb(70, 100, 100, 0))
 }
 
 class FiltroCorFragment : Fragment() {

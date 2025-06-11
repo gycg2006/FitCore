@@ -61,24 +61,23 @@ class CadastromaquinaAdiministrador : AppCompatActivity() {
         // Desabilitar botão para evitar cliques múltiplos
         buttonRegistrarMaquina.isEnabled = false
 
-        val novaMaquina = Maquina(
-            nome = nome,
-            urlFoto = midiaUrl,
-            descricao = localizador
+        val novasInformacoes = hashMapOf(
+            "nome" to nome,
+            "urlFoto" to midiaUrl,
+            "observacoes" to localizador,
+            "repeticoes" to 12,
+            "series" to 4
         )
 
         db.collection("Maquina")
-            .add(novaMaquina)
+            .add(novasInformacoes)
             .addOnSuccessListener { documentReference ->
-                Toast.makeText(this, "Máquina registrada com ID: ${documentReference.id}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Exercício registrado com ID: ${documentReference.id}", Toast.LENGTH_LONG).show()
+                // Limpar campos ou navegar para outra tela
                 val intent = Intent(this, CentralAdministrador::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                 startActivity(intent)
-                finish()
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Erro ao registrar máquina: ${e.message}", Toast.LENGTH_LONG).show()
-                buttonRegistrarMaquina.isEnabled = true // Reabilitar botão
+                finish() // Finaliza esta activity
             }
     }
 }

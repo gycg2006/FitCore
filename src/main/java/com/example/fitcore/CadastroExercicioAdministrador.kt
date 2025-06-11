@@ -63,15 +63,16 @@ class CadastroExercicioAdministrador : AppCompatActivity() {
         // Desabilitar botão para evitar cliques múltiplos
         buttonRegistrarExercicio.isEnabled = false
 
-        // Cria um novo exercício com um ID gerado automaticamente
-        val novoExercicio = Exercicio(
-            nome = nome,
-            urlFoto = midiaUrl,
-            descricao = descricao
+        val novasInformacoes = hashMapOf(
+            "nome" to nome,
+            "urlFoto" to midiaUrl,
+            "observacoes" to descricao,
+            "repeticoes" to 12,
+            "series" to 4
         )
 
-        db.collection("Exercicios") // Usando "Exercicios" como nome da coleção
-            .add(novoExercicio)
+        db.collection("Maquina")
+            .add(novasInformacoes)
             .addOnSuccessListener { documentReference ->
                 Toast.makeText(this, "Exercício registrado com ID: ${documentReference.id}", Toast.LENGTH_LONG).show()
                 // Limpar campos ou navegar para outra tela
@@ -80,9 +81,7 @@ class CadastroExercicioAdministrador : AppCompatActivity() {
                 startActivity(intent)
                 finish() // Finaliza esta activity
             }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Erro ao registrar exercício: ${e.message}", Toast.LENGTH_LONG).show()
-                buttonRegistrarExercicio.isEnabled = true // Reabilitar botão em caso de falha
-            }
+
+
     }
 }

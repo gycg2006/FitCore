@@ -39,28 +39,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         buttonAcessarNutri.setOnClickListener {
-            db.collection("Usuario")
-                .whereEqualTo("email", Login.LoginCredentials.emailLogado)
-                .get()
-                .addOnSuccessListener { documents ->
-                    if (documents.isEmpty) {
-                        Toast.makeText(requireContext(), "E-mail ou senha inválidos.", Toast.LENGTH_LONG).show()
-                        Log.d(
-                            "LoginFirestore",
-                            "Nenhum documento encontrado para o email: ${Login.LoginCredentials.emailLogado}"
-                        )
-                    } else {
-                        val userDocument = documents.documents[0]
-                        val contratoBool = userDocument.getString("contrato")
-                        if (contratoBool == ("true")) {
-                            val intent = Intent(requireContext(), Nutricionista_chat::class.java)
-                            startActivity(intent)
-                        } else {
-                            val intent = Intent(requireContext(), ContratoNutricionista::class.java)
-                            startActivity(intent)
-                        }
-                    }
-                }
+            val intent = Intent(requireContext(), ContratoNutricionista::class.java)
+            startActivity(intent)
         }
     }
 }

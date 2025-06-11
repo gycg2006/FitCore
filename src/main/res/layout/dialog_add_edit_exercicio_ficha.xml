@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNomeExercicioDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Exercício"
+        android:inputType="textCapWords"
+        android:autofillHints="name" />
+
+    <EditText
+        android:id="@+id/editTextMidiaUrlDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="URL da Mídia (imagem/gif)"
+        android:inputType="textUri"
+        android:autofillHints="url" />
+
+    <EditText
+        android:id="@+id/editTextSeriesDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Séries (ex: 3)"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextRepeticoesDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Repetições (ex: 10-12)"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextObservacoesDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Observações (opcional)"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:gravity="top"/>
+
+</LinearLayout>
